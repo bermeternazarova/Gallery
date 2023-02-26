@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="devise_p8">8dp</dimen>
+    <dimen name="device_p12">12dp</dimen>
+    <dimen name="scale_p18">18sp</dimen>
+    <dimen name="device_p16">16dp</dimen>
+    <dimen name="device_p28">28dp</dimen>
+    <dimen name="device_p8">8dp</dimen>
+    <dimen name="device_p4">4dp</dimen>
+</resources>

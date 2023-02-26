@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container_gallery"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GalleryFragment">
+    <TextView
+        android:id="@+id/tv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/choose_photo"
+        android:textSize="@dimen/scale_p18"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/device_p16"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_main"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_main"
+        android:layout_marginTop="@dimen/device_p28"
+        android:layout_marginHorizontal="@dimen/device_p8"
+        app:spanCount="3"
+        tools:listitem="@layout/item_gallery"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_send"
+        app:layout_constraintBottom_toBottomOf="@id/tv_main"
+        app:layout_constraintStart_toEndOf="@id/tv_main"
+        android:layout_marginStart="@dimen/device_p4"
+        app:layout_constraintTop_toTopOf="@id/tv_main"
+        android:text="@string/send"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_gallery"
+        app:layout_constraintTop_toTopOf="@id/tv_main"
+        app:layout_constraintBottom_toBottomOf="@id/tv_main"
+        app:layout_constraintEnd_toStartOf="@id/tv_main"
+        android:layout_marginEnd="@dimen/device_p4"
+        android:text="@string/gallery"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
