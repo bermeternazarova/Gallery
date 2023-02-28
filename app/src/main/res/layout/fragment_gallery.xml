@@ -1,53 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_gallery"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/container_gallery"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".GalleryFragment">
+    tools:context=".view.GalleryFragment">
+
     <TextView
         android:id="@+id/tv_main"
+        style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/choose_photo"
-        android:textSize="@dimen/scale_p18"
-        android:textColor="@color/black"
-        android:textStyle="bold"
         android:layout_marginTop="@dimen/device_p16"
-        />
+        android:text="@string/choose_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/device_p16"
+        android:layout_marginTop="@dimen/device_300p"
+        android:layout_marginEnd="@dimen/device_p4"
+        android:background="@drawable/button_circle"
+        android:text="@string/gallery"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_main"
         android:layout_width="match_parent"
-        android:layout_height="650dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/tv_main"
-        android:layout_marginTop="@dimen/device_p28"
+        android:layout_height="0dp"
         android:layout_marginHorizontal="@dimen/device_p8"
+        android:layout_marginTop="@dimen/device_p28"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_main"
         app:spanCount="3"
-        tools:listitem="@layout/item_gallery"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_send"
-        app:layout_constraintBottom_toBottomOf="@id/tv_main"
-        app:layout_constraintStart_toEndOf="@id/tv_main"
-        android:layout_marginStart="@dimen/device_p4"
-        app:layout_constraintTop_toTopOf="@id/tv_main"
-        android:text="@string/send"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_gallery"
-        app:layout_constraintTop_toTopOf="@id/tv_main"
-        app:layout_constraintBottom_toBottomOf="@id/tv_main"
-        app:layout_constraintEnd_toStartOf="@id/tv_main"
-        android:layout_marginEnd="@dimen/device_p4"
-        android:text="@string/gallery"/>
+        tools:listitem="@layout/item_gallery" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginBottom="@dimen/device_p20"
+        app:cardCornerRadius="@dimen/device_p16"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_snack"
+            android:layout_width="190dp"
+            android:layout_height="24dp"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="@dimen/device_p14"
+            android:text="@string/choose_images"
+            android:textColor="@color/black"
+            android:textSize="@dimen/device_p16" />
+
+        <Button
+            android:id="@+id/btn_ready"
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="@dimen/device_p16"
+            android:background="@drawable/button_circle"
+            android:text="@string/ready"
+            android:textColor="@color/white" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

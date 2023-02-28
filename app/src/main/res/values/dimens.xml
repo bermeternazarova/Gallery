@@ -7,4 +7,7 @@
     <dimen name="device_p28">28dp</dimen>
     <dimen name="device_p8">8dp</dimen>
     <dimen name="device_p4">4dp</dimen>
+    <dimen name="device_300p">300dp</dimen>
+    <dimen name="device_p20">20dp</dimen>
+    <dimen name="device_p14">14dp</dimen>
 </resources>

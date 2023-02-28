@@ -5,6 +5,12 @@
     <string name="choose_photo">Выбор фотографий</string>
     <string name="send">send</string>
     <string name="gallery">gallery</string>
+    <string name="choose_images">Выбрано фотографий 0  </string>
     <string name="chosen_images">Выбранные фотографии</string>
     <string name="ready">Готово</string>
+    <string name="all_ready">Все готово</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="enter_the_gallery">Enter the Gallery?</string>
+    <string name="num_of_images">Выбрано фотографий %s</string>
 </resources>

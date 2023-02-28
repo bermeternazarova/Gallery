@@ -4,8 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gallery.databinding.ItemGalleryBinding
+import com.example.gallery.loadImage
+import com.example.gallery.model.ModelGallery
 
-class AdapterFile(private val list: ArrayList<String>) :
+class AdapterFile(private val list: ArrayList<ModelGallery>) :
     RecyclerView.Adapter<AdapterFile.ViewHolderFile>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderFile {
         return ViewHolderFile(
@@ -27,9 +29,8 @@ class AdapterFile(private val list: ArrayList<String>) :
 
     class ViewHolderFile(private val binding: ItemGalleryBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(image: String) {
-
+        fun bind(image: ModelGallery) {
+           binding.imageItem.loadImage(image.image)
         }
-
     }
 }

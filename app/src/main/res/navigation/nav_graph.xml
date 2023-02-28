@@ -6,12 +6,12 @@
     app:startDestination="@id/galleryFragment">
     <fragment
         android:id="@+id/galleryFragment"
-        android:name="com.example.gallery.GalleryFragment"
+        android:name="com.example.gallery.view.GalleryFragment"
         android:label="fragment_gallery"
         tools:layout="@layout/fragment_gallery" />
     <fragment
         android:id="@+id/fileFragment"
-        android:name="com.example.gallery.FileFragment"
+        android:name="com.example.gallery.view.FileFragment"
         android:label="fragment_file"
         tools:layout="@layout/fragment_file" />
 </navigation>

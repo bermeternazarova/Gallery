@@ -1,19 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="@dimen/device_p8"
     android:paddingHorizontal="@dimen/device_p8"
-    android:gravity="center"
     android:id="@+id/container_item">
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/image_item"
-        android:layout_marginTop="@dimen/device_p12"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/is_press"
         android:src="@mipmap/ic_launcher"
         app:shapeAppearanceOverlay="@style/Rounded"
-        />
+        tools:ignore="ImageContrastCheck"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:visibility="gone"
+        android:background="@drawable/ic_baseline_check_24"
+        app:shapeAppearanceOverlay="@style/Rounded"
+        tools:ignore="ImageContrastCheck"/>
 
-</RelativeLayout>
+
+</androidx.cardview.widget.CardView>

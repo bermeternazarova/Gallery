@@ -1,6 +1,6 @@
 package com.example.gallery.model
 
 data class ModelGallery(
-    val image:String,
-    val isPick:Boolean
-)
+    val image:String
+    , var isPicked:Boolean
+):java.io.Serializable
